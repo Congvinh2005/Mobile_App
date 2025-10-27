@@ -186,38 +186,6 @@ public class XemDonActivity extends AppCompatActivity {
             dialog = builder.create();
             dialog.show();
         }
-//        List<String> list = new ArrayList<>();
-//        list.add("Đơn hàng đang được xử lý");
-//        list.add("Đơn hàng đã giao cho đơn vị vận chuyển");
-//        list.add("Giao hàng thành công");
-//        list.add("Đơn hàng đã hủy");
-//        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, list);
-//        spinner.setAdapter(adapter);
-//        spinner.setSelection(donHang.getTrangthai());
-//
-//        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-//            @Override
-//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-//                tinhtrang = position;
-//            }
-//
-//            @Override
-//            public void onNothingSelected(AdapterView<?> parent) {
-//
-//            }
-//        });
-//        btndongy.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                capNhatDonHang();
-//            }
-//        });
-//
-//        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-//        builder.setView(view);
-//        dialog = builder.create();
-//        dialog.show();
-
     }
 
     private void capNhatDonHang() {

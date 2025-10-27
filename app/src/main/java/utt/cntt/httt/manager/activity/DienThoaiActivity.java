@@ -137,6 +137,12 @@ public class DienThoaiActivity extends AppCompatActivity {
         } else if (loai == 2) {
             getSupportActionBar().setTitle("Laptop");
         }
+        else if (loai == 3) {
+            getSupportActionBar().setTitle("Đồng hồ thông minh");
+        }
+        else if (loai == 4) {
+            getSupportActionBar().setTitle("Phụ kiện");
+        }
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

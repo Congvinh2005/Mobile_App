@@ -92,45 +92,6 @@ public class ChiTietActivity extends AppCompatActivity {
         badge.setText(String.valueOf(totalItem));
     }
 
-//private void themGioHang() {
-//    int soluong = Integer.parseInt(spinner.getSelectedItem().toString());
-//    boolean flag = false;
-//
-//    if (Utils.manggiohang.size() > 0) {
-//        for (int i = 0; i < Utils.manggiohang.size(); i++) {
-//            if (Utils.manggiohang.get(i).getIdsp() == sanPhamMoi.getId()) {
-//                // Nếu sản phẩm đã có trong giỏ thì chỉ cộng thêm số lượng
-//                Utils.manggiohang.get(i).setSoluong(
-//                        Utils.manggiohang.get(i).getSoluong() + soluong
-//                );
-//                flag = true;
-//                break;
-//            }
-//        }
-//    }
-//
-//    // Nếu sản phẩm chưa có trong giỏ
-//    if (!flag) {
-//        GioHang gioHang = new GioHang();
-//        gioHang.setIdsp(sanPhamMoi.getId());
-//        gioHang.setTensp(sanPhamMoi.getTensp());
-//        gioHang.setHinhanh(sanPhamMoi.getHinhanh());
-//        gioHang.setSoluong(soluong);
-//        gioHang.setGiasp(Long.parseLong(sanPhamMoi.getGiasp())); // CHỈ LƯU GIÁ GỐC
-//        Utils.manggiohang.add(gioHang);
-//    }
-//
-//    // Cập nhật badge (số lượng sản phẩm)
-//    int totalItem = 0;
-//    for (int i = 0; i < Utils.manggiohang.size(); i++) {
-//        totalItem += Utils.manggiohang.get(i).getSoluong();
-//    }
-//    badge.setText(String.valueOf(totalItem));
-//
-//    Toast.makeText(this, "Đã thêm vào giỏ hàng!", Toast.LENGTH_SHORT).show();
-//}
-
-
 
     private void initData() {
         sanPhamMoi = (SanPhamMoi) getIntent().getSerializableExtra("chitiet");

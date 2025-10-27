@@ -16,6 +16,12 @@
         android:theme="@style/Theme.AppBanHang"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".activity.DongHoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ThongTinActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.ThemTkActivity"
             android:exported="false" />
         <activity

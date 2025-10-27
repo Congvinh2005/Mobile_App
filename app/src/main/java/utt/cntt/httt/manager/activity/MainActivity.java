@@ -107,25 +107,35 @@ public class MainActivity extends AppCompatActivity {
                             laptop.putExtra("loai", 2);
                             startActivity(laptop);
                             break;
-                        case 5:
+                        case 3:
+                            Intent dongho = new Intent(getApplicationContext(), DienThoaiActivity.class);
+                            dongho.putExtra("loai", 3);
+                            startActivity(dongho);
+                            break;
+                        case 4:
+                            Intent phukien = new Intent(getApplicationContext(), DienThoaiActivity.class);
+                            phukien.putExtra("loai", 4);
+                            startActivity(phukien);
+                            break;
+                        case 7:
                             Intent donhang = new Intent(getApplicationContext(), XemDonActivity.class);
                             startActivity(donhang);
                             break;
-                        case 6:
+                        case 8:
                             Intent quanli = new Intent(getApplicationContext(), QuanLiActivity.class);
                             startActivity(quanli);
                             finish();
                             break;
-                        case 7:
+                        case 9:
                             Intent quanlitk = new Intent(getApplicationContext(), QuanLiTkActivity.class);
                             startActivity(quanlitk);
                             finish();
                             break;
-                        case 8:
+                        case 10:
                             Intent thongke = new Intent(getApplicationContext(), ThongKeActivity.class);
                             startActivity(thongke);
                             break;
-                        case 9:
+                        case 11:
                             // xoa key user
                             Paper.book().delete("user");
                             FirebaseAuth.getInstance().signOut();
@@ -148,12 +158,21 @@ public class MainActivity extends AppCompatActivity {
                             Intent laptop = new Intent(getApplicationContext(), DienThoaiActivity.class);
                             laptop.putExtra("loai", 2);
                             startActivity(laptop);
+                        case 3:
+                            Intent dongho = new Intent(getApplicationContext(), DienThoaiActivity.class);
+                            dongho.putExtra("loai", 3);
+                            startActivity(dongho);
                             break;
-                        case 5:
+                        case 4:
+                            Intent phukien = new Intent(getApplicationContext(), DienThoaiActivity.class);
+                            phukien.putExtra("loai", 4);
+                            startActivity(phukien);
+                            break;
+                        case 7:
                             Intent donhang = new Intent(getApplicationContext(), XemDonActivity.class);
                             startActivity(donhang);
                             break;
-                        case 6:
+                        case 8:
                             // xoa key user
                             Paper.book().delete("user");
                             FirebaseAuth.getInstance().signOut();
