@@ -66,4 +66,7 @@ dependencies {
     implementation ("com.github.fornewid:neumorphism:0.3.2")
     implementation ("com.github.dhaval2404:imagepicker:2.1")
     implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
+    // Google Maps
+    implementation("com.google.android.gms:play-services-maps:19.0.0")
+    implementation("com.google.android.gms:play-services-location:21.3.0")
 }

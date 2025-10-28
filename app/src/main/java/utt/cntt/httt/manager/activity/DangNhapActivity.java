@@ -48,6 +48,15 @@ public class DangNhapActivity extends AppCompatActivity {
         });
 
 
+        txtresetpass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(getApplicationContext(), ResetPassActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
         btndangnhap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -90,6 +99,7 @@ public class DangNhapActivity extends AppCompatActivity {
         Paper.init(this);
         apiBanHang = RetrofitClient.getInstance(Utils.BASE_URL).create(ApiBanHang.class);
         txtdangki = findViewById(R.id.txtdangki);
+        txtresetpass = findViewById(R.id.txtresetpass);
         email = findViewById(R.id.email);
         pass = findViewById(R.id.pass);
         btndangnhap = findViewById(R.id.btndangnhap);

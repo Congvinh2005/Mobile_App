@@ -117,6 +117,15 @@ public class MainActivity extends AppCompatActivity {
                             phukien.putExtra("loai", 4);
                             startActivity(phukien);
                             break;
+                        case 5:
+                            Intent thongtin = new Intent(getApplicationContext(), ThongTinActivity.class);
+                            startActivity(thongtin);
+                            break;
+
+                        case 6:
+                            Intent lienhe = new Intent(getApplicationContext(),LienHeActivity.class);
+                            startActivity(lienhe);
+                            break;
                         case 7:
                             Intent donhang = new Intent(getApplicationContext(), XemDonActivity.class);
                             startActivity(donhang);

@@ -85,6 +85,7 @@ public class DangKiActivity extends AppCompatActivity {
                                     if (userModel.isSuccess()) {
                                         Utils.user_current.setEmail(str_email);
                                         Utils.user_current.setPass(str_pass);
+                                        Toast.makeText(this, "Đăng ký tài khoản thành công !!!", Toast.LENGTH_SHORT).show();
                                         Intent intent = new Intent(getApplicationContext(), DangNhapActivity.class);
                                         startActivity(intent);
                                         finish();

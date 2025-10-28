@@ -44,10 +44,15 @@ public class DonHangAdapter extends RecyclerView.Adapter<DonHangAdapter.MyViewHo
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         DonHang donHang = listdonhang.get(position);
-        holder.txtdonhang.setText("Đơn hàng: " + donHang.getId());
+//        holder.txtdonhang.setText("Đơn hàng: " + donHang.getId());
+        if (Utils.user_current.getRole() == 2) {
+            holder.txtdonhang.setText("Đơn hàng: " + donHang.getId());
+        } else {
+            holder.txtdonhang.setText("Đơn hàng của bạn");
+        }
         holder.diachi.setText("Địa chỉ: " + donHang.getDiachi());
         if (Utils.user_current.getRole() == 2) {
-            holder.username.setText("Người đặt: " + donHang.getUsername());
+            holder.username.setText("Người đặt: " +donHang.getUsername());
         } else {
             holder.username.setText("");
         }
