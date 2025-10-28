@@ -222,12 +222,12 @@ public class MainActivity extends AppCompatActivity {
                             if (loaiSpModel.isSuccess()) {
                                 mangloaisp = loaiSpModel.getResult();
                                 if (Utils.user_current.getRole() == 2) {
-                                    mangloaisp.add(new LoaiSp("Quản lí sản phẩm", "http://mauweb.monamedia.net/thegioididong/wp-content/uploads/2017/12/banner-big-ky-nguyen-800-300.jpg"));
-                                    mangloaisp.add(new LoaiSp("Quản lí tài khoản", "http://mauweb.monamedia.net/thegioididong/wp-content/uploads/2017/12/banner-big-ky-nguyen-800-300.jpg"));
-                                    mangloaisp.add(new LoaiSp("Thống kê", "http://mauweb.monamedia.net/thegioididong/wp-content/uploads/2017/12/banner-big-ky-nguyen-800-300.jpg"));
+                                    mangloaisp.add(new LoaiSp("Quản lí sản phẩm", "https://bizflyportal.mediacdn.vn/bizflyportal/images/qua16474020974801.jpg"));
+                                    mangloaisp.add(new LoaiSp("Quản lí tài khoản", "https://png.pngtree.com/png-vector/20190307/ourlarge/pngtree-vector-user-management-icon-png-image_780446.jpg"));
+                                    mangloaisp.add(new LoaiSp("Thống kê", "https://bcp.cdnchinhphu.vn/334894974524682240/2022/9/12/thong-ke-la-gi-16539018936401699173581-16629516193961385514575.jpg"));
                                 }
 
-                                mangloaisp.add(new LoaiSp("Đăng xuất", "http://mauweb.monamedia.net/thegioididong/wp-content/uploads/2017/12/banner-big-ky-nguyen-800-300.jpg"));
+                                mangloaisp.add(new LoaiSp("Đăng xuất", "https://png.pngtree.com/png-vector/20190917/ourlarge/pngtree-logout-icon-vectors-png-image_1737872.jpg"));
                                 loaiSpAdapter = new LoaiSpAdapter(getApplicationContext(),mangloaisp);
                                 listViewManHinhChinh.setAdapter(loaiSpAdapter);
                             }

@@ -69,4 +69,8 @@ dependencies {
     // Google Maps
     implementation("com.google.android.gms:play-services-maps:19.0.0")
     implementation("com.google.android.gms:play-services-location:21.3.0")
+    
+    // Currently commented out as Momo SDK is not available in public repositories
+    // Momo Payment SDK
+    // implementation("vn.momo.mservice:payment-sdk:3.0.1")
 }
