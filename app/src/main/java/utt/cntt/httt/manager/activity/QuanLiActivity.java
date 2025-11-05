@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -78,7 +79,7 @@ public class QuanLiActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), ThemSPActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent, 1);
             }
         });
 
@@ -167,9 +168,18 @@ public class QuanLiActivity extends AppCompatActivity {
     private void suaSanPham() {
         Intent intent = new Intent(getApplicationContext(), ThemSPActivity.class);
         intent.putExtra("sua", sanPhamSuaXoa);
-        startActivity(intent);
+        startActivityForResult(intent, 1);
     }
 
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1 && resultCode == RESULT_OK && data != null) {
+            boolean dataChanged = data.getBooleanExtra("dataChanged", false);
+            if (dataChanged) {
+                getSpMoi(); // ✅ Gọi lại API để load danh sách mới
+            }
+        }
+    }
     @Override
     protected void onDestroy() {
         compositeDisposable.clear();

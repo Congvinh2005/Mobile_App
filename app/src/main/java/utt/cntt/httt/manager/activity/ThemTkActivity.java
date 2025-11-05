@@ -142,6 +142,10 @@ public class ThemTkActivity extends AppCompatActivity {
                             messageModel -> {
                                 if (messageModel.isSuccess()) {
                                     Toast.makeText(getApplicationContext(), messageModel.getMessage(), Toast.LENGTH_SHORT).show();
+                                    Intent resultIntent = new Intent();
+                                    resultIntent.putExtra("dataChanged", true);
+                                    setResult(RESULT_OK, resultIntent);
+                                    finish();
                                 } else {
                                     Toast.makeText(getApplicationContext(), messageModel.getMessage(), Toast.LENGTH_SHORT).show();
                                 }
@@ -169,6 +173,10 @@ public class ThemTkActivity extends AppCompatActivity {
                             messageModel -> {
                                 if (messageModel.isSuccess()) {
                                     Toast.makeText(getApplicationContext(), messageModel.getMessage(), Toast.LENGTH_SHORT).show();
+                                    Intent resultIntent = new Intent();
+                                    resultIntent.putExtra("dataChanged", true);
+                                    setResult(RESULT_OK, resultIntent);
+                                    finish();
                                 } else {
                                     Toast.makeText(getApplicationContext(), messageModel.getMessage(), Toast.LENGTH_SHORT).show();
                                 }

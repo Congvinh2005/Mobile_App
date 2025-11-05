@@ -147,6 +147,12 @@ public class ThemSPActivity extends AppCompatActivity {
                             messageModel -> {
                                 if (messageModel.isSuccess()) {
                                     Toast.makeText(getApplicationContext(), messageModel.getMessage(), Toast.LENGTH_SHORT).show();
+
+                                    // Gửi tín hiệu về QuanLiTkActivity để nó load lại dữ liệu
+                                    Intent resultIntent = new Intent();
+                                    resultIntent.putExtra("dataChanged", true);
+                                    setResult(RESULT_OK, resultIntent);
+                                    finish();
                                 } else {
                                     Toast.makeText(getApplicationContext(), messageModel.getMessage(), Toast.LENGTH_SHORT).show();
                                 }
@@ -189,6 +195,12 @@ public class ThemSPActivity extends AppCompatActivity {
                             messageModel -> {
                                 if (messageModel.isSuccess()) {
                                     Toast.makeText(getApplicationContext(), messageModel.getMessage(), Toast.LENGTH_SHORT).show();
+
+                                    // Gửi tín hiệu về QuanLiTkActivity để nó load lại dữ liệu
+                                    Intent resultIntent = new Intent();
+                                    resultIntent.putExtra("dataChanged", true);
+                                    setResult(RESULT_OK, resultIntent);
+                                    finish();
                                 } else {
                                     Toast.makeText(getApplicationContext(), messageModel.getMessage(), Toast.LENGTH_SHORT).show();
                                 }
